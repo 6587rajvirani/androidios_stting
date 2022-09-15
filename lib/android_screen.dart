@@ -2,6 +2,7 @@ import 'package:androidios_stting/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 class androidscreen extends StatefulWidget {
   const androidscreen({Key? key}) : super(key: key);
 
@@ -120,13 +121,7 @@ class _androidscreenState extends State<androidscreen> {
                         ListTile(
                           leading: Icon(Icons.lock),
                           title: Text("Change Password"),
-                          trailing: Switch(
-                              value: Provider.of<homeprovider>(context,listen: true).isCheck,
-                               onChanged: (value){
-                                Provider.of<homeprovider>(context,listen: true).switc(value);
-                            },
-                              activeColor: Colors.red,
-                          ),
+
                         ),
                         Row(
                           mainAxisAlignment:MainAxisAlignment.start ,

@@ -1,5 +1,8 @@
 import 'dart:io';
 import 'package:androidios_stting/android_screen.dart';
+import 'package:androidios_stting/appstor/firstScreen.dart';
+import 'package:androidios_stting/appstor/imageprovider.dart';
+import 'package:androidios_stting/appstor/tabbarView.dart';
 import 'package:androidios_stting/iosScreen.dart';
 import 'package:androidios_stting/provider.dart';
 import 'package:androidios_stting/stepbottom.dart';
@@ -20,6 +23,7 @@ void main() {
       providers: [
         ListenableProvider<homeprovider>(create: (context) => homeprovider(),),
         ListenableProvider<stepper_Provider>(create: (context) => stepper_Provider(),),
+        ListenableProvider<Image_Provider>(create:(context)=>Image_Provider(), )
       ],
       child:android(),
     ),
@@ -34,9 +38,11 @@ void main() {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>MyHomePage(),
-        'top':(context)=>steptop_Screen(),
-        'bottom':(context)=>stepbotom_Screen(),
+        '/':(context)=>home(),
+        'one':(context)=>screenone(),
+        //'/':(context)=>MyHomePage(),
+        //'top':(context)=>steptop_Screen(),
+        //'bottom':(context)=>stepbotom_Screen(),
        // '/': (context) => androidscreen(),
 
       },
@@ -46,9 +52,11 @@ void main() {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>MyHomePage(),
-        'top':(context)=>steptop_Screen(),
-        'bottom':(context)=>stepbotom_Screen(),
+        '/':(context)=>home(),
+        'one':(context)=>screenone(),
+        //'/':(context)=>MyHomePage(),
+        //'top':(context)=>steptop_Screen(),
+        //'bottom':(context)=>stepbotom_Screen(),
       //  '/': (context) => ios_Screen(),
       },
     );
