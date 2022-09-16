@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:androidios_stting/android_screen.dart';
+import 'package:androidios_stting/appstor/botomnavigationbar.dart';
 import 'package:androidios_stting/appstor/firstScreen.dart';
 import 'package:androidios_stting/appstor/imageprovider.dart';
 import 'package:androidios_stting/appstor/tabbarView.dart';
@@ -16,14 +17,16 @@ import 'package:provider/provider.dart';
 
 void main() {
 
- SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.red));
+ SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white,statusBarIconBrightness: Brightness.dark,systemNavigationBarDividerColor: Colors.black));
+
 
   runApp(
     MultiProvider(
       providers: [
         ListenableProvider<homeprovider>(create: (context) => homeprovider(),),
         ListenableProvider<stepper_Provider>(create: (context) => stepper_Provider(),),
-        ListenableProvider<Image_Provider>(create:(context)=>Image_Provider(), )
+        ListenableProvider<Image_Provider>(create:(context)=>Image_Provider(),),
+        ListenableProvider<botoomnavigationbar>(create: (context)=>botoomnavigationbar(),),
       ],
       child:android(),
     ),
@@ -34,7 +37,7 @@ void main() {
   Widget android() {
     return MaterialApp(
       theme: ThemeData(
-        splashColor: Colors.red,
+        splashColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
       routes: {
