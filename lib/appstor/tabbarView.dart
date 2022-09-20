@@ -1,5 +1,6 @@
 import 'package:androidios_stting/appstor/botomnavigationbar.dart';
 import 'package:androidios_stting/appstor/firstScreen.dart';
+import 'package:androidios_stting/appstor/gamefirstScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,26 +12,13 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
-  List WidgetsList=[screenone(),home(),screenone(),];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body:WidgetsList[Provider.of<botoomnavigationbar>(context,listen: true).i],
-        bottomNavigationBar:Column(
-          children: [
-            BottomNavigationBar(
-              onTap:(value){
-                Provider.of<botoomnavigationbar>(context,listen:false).changeicon(value);
-              },
-              currentIndex:Provider.of<botoomnavigationbar>(context,listen:true).i,
-              items:[
-                BottomNavigationBarItem(icon:Icon(Icons.home),label:"home"),
-                BottomNavigationBarItem(icon:Icon(Icons.home),label:"home"),
-                BottomNavigationBarItem(icon:Icon(Icons.home),label:"home"),
-              ],
-            ),
+        body:
             SingleChildScrollView(
               child: Container(
                 child: Column(
@@ -82,7 +70,7 @@ class _homeState extends State<home> {
                                   child: TabBarView(
                                     children: [
                                       screenone(),
-                                      screenone(),
+                                      GameFirst_Scree(),
                                       screenone(),
                                       screenone(),
                                     ],
@@ -99,10 +87,7 @@ class _homeState extends State<home> {
                 ),
               ),
             ),
-          ],
-        ),
-
-        ),
+      ),
     );
   }
 }

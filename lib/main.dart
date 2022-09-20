@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'package:androidios_stting/android_screen.dart';
 import 'package:androidios_stting/appstor/botomnavigationbar.dart';
+import 'package:androidios_stting/appstor/bottombar.dart';
 import 'package:androidios_stting/appstor/firstScreen.dart';
+import 'package:androidios_stting/appstor/gamefirstScreen.dart';
 import 'package:androidios_stting/appstor/imageprovider.dart';
 import 'package:androidios_stting/appstor/tabbarView.dart';
 import 'package:androidios_stting/iosScreen.dart';
@@ -41,8 +43,10 @@ void main() {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>home(),
+        '/':(context)=>bottomber_Screen(),
+        'top':(context)=>home(),
         'one':(context)=>screenone(),
+        'game':(context)=>GameFirst_Scree(),
         //'/':(context)=>MyHomePage(),
         //'top':(context)=>steptop_Screen(),
         //'bottom':(context)=>stepbotom_Screen(),
@@ -55,8 +59,10 @@ void main() {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>home(),
+        '/':(context)=>bottomber_Screen(),
+        'top':(context)=>home(),
         'one':(context)=>screenone(),
+        'game':(context)=>GameFirst_Scree(),
         //'/':(context)=>MyHomePage(),
         //'top':(context)=>steptop_Screen(),
         //'bottom':(context)=>stepbotom_Screen(),
