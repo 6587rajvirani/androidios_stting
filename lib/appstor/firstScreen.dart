@@ -1,5 +1,6 @@
 
 import 'package:androidios_stting/appstor/imageprovider.dart';
+import 'package:androidios_stting/appstor/modelclass.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +20,6 @@ class _screenoneState extends State<screenone> {
     imageProviderF = Provider.of<Image_Provider>(context,listen: false);
     return SingleChildScrollView(
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(
             height: 20,
@@ -45,30 +45,39 @@ class _screenoneState extends State<screenone> {
             height: 150,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: imageProviderF!.name.length,
+              itemCount: imageProviderF!.dataone.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)
+                return InkWell(onTap: (){
+                  imageProviderF!.Datapickk = screenModel(
+                      photo: imageProviderF!.dataone[index].photo,
+                      appname: imageProviderF!.dataone[index].appname,
+                    star: imageProviderF!.dataone[index].star,
+                  );
+
+                  Navigator.pushNamed(context, 'sec');
+                },
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)
+                          ),
+                          child: Image.asset(imageProviderF!.dataone[index].photo as String),
                         ),
-                        child: Image.asset(imageProviderF!.dataone[index].photo as String),
-                      ),
-                      //SizedBox(height: 5,),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 3),
-                        child: Container(
-                            width: 100,
-                            child: Text("${imageProviderF!.dataone[index].appname}")),
-                      ),
-                      Text("${imageProviderF!.dataone[index].star} ★"),
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Container(
+                              width: 100,
+                              child: Text("${imageProviderF!.dataone[index].appname}")),
+                        ),
+                        Text("${imageProviderF!.dataone[index].star} ★"),
+                      ],
+                    ),
                   ),
                 );
               },
@@ -86,7 +95,7 @@ class _screenoneState extends State<screenone> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Recommended for you",
+                  "New & updated apps",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 Icon(Icons.arrow_forward),
@@ -100,30 +109,40 @@ class _screenoneState extends State<screenone> {
             height: 150,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: imageProviderF!.name.length,
+              itemCount: imageProviderF!.datatwo.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)
+                return InkWell(onTap: (){
+                  imageProviderF!.Datapickk = screenModel(
+                    photo: imageProviderF!.datatwo[index].photo,
+                    appname: imageProviderF!.datatwo[index].appname,
+                    star: imageProviderF!.datatwo[index].star,
+                  );
+
+                  Navigator.pushNamed(context, 'sec');
+                },
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)
+                          ),
+                          child: Image.asset(imageProviderF!.datatwo[index].photo as String),
                         ),
-                        child: Image.asset(imageProviderF!.datatwo[index].photo as String),
-                      ),
-                      //SizedBox(height: 5,),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 3),
-                        child: Container(
-                            width: 100,
-                            child: Text("${imageProviderF!.datatwo[index].appname}")),
-                      ),
-                      Text("${imageProviderF!.datatwo[index].star} ★"),
-                    ],
+                        //SizedBox(height: 5,),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Container(
+                              width: 100,
+                              child: Text("${imageProviderF!.datatwo[index].appname}")),
+                        ),
+                        Text("${imageProviderF!.datatwo[index].star} ★"),
+                      ],
+                    ),
                   ),
                 );
               },
@@ -142,7 +161,7 @@ class _screenoneState extends State<screenone> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Recommended for you",
+                  "Suggested for you",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 Icon(Icons.arrow_forward),
@@ -156,34 +175,44 @@ class _screenoneState extends State<screenone> {
             height: 160,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: imageProviderF!.name.length,
+              itemCount: imageProviderF!.datathree.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)
+                return InkWell(onTap: (){
+                  imageProviderF!.Datapickk = screenModel(
+                    photo: imageProviderF!.datathree[index].photo,
+                    appname: imageProviderF!.datathree[index].appname,
+                    star: imageProviderF!.datathree[index].star,
+                  );
+
+                  Navigator.pushNamed(context, 'sec');
+                },
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)
+                          ),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image.asset(imageProviderF!.datathree[index].photo as String,)),
                         ),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(imageProviderF!.datathree[index].photo as String,)),
-                      ),
-                      //SizedBox(height: 5,),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 3),
-                        child: Container(
-                            height: 30,
-                            width: 100,
-                            alignment: Alignment.centerLeft,
-                            child: Text("${imageProviderF!.datathree[index].appname}")),
-                      ),
-                      Text("${imageProviderF!.datathree[index].star} ★"),
-                    ],
+                        //SizedBox(height: 5,),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Container(
+                              height: 30,
+                              width: 100,
+                              alignment: Alignment.centerLeft,
+                              child: Text("${imageProviderF!.datathree[index].appname}")),
+                        ),
+                        Text("${imageProviderF!.datathree[index].star} ★"),
+                      ],
+                    ),
                   ),
                 );
               },
@@ -202,7 +231,7 @@ class _screenoneState extends State<screenone> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Recommended for you",
+                  "Editor's Choice apps",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 Icon(Icons.arrow_forward),
@@ -216,30 +245,40 @@ class _screenoneState extends State<screenone> {
             height: 150,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: imageProviderF!.name.length,
+              itemCount: imageProviderF!.datafour.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)
+                return InkWell(onTap:(){
+                  imageProviderF!.Datapickk = screenModel(
+                    photo: imageProviderF!.datafour[index].photo,
+                    appname: imageProviderF!.datafour[index].appname,
+                    star: imageProviderF!.datafour[index].star,
+                  );
+
+                  Navigator.pushNamed(context, 'sec');
+                },
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)
+                          ),
+                          child: Image.asset(imageProviderF!.datafour[index].photo as String),
                         ),
-                        child: Image.asset(imageProviderF!.datafour[index].photo as String),
-                      ),
-                      //SizedBox(height: 5,),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 3),
-                        child: Container(
-                            width: 100,
-                            child: Text("${imageProviderF!.datafour[index].appname}")),
-                      ),
-                      Text("${imageProviderF!.datafour[index].star} ★"),
-                    ],
+                        //SizedBox(height: 5,),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Container(
+                              width: 100,
+                              child: Text("${imageProviderF!.datafour[index].appname}")),
+                        ),
+                        Text("${imageProviderF!.datafour[index].star} ★"),
+                      ],
+                    ),
                   ),
                 );
               },

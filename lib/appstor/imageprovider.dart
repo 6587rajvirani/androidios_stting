@@ -13,12 +13,6 @@ class Image_Provider extends ChangeNotifier
     screenModel(photo: "assets/image/swiggy.png",appname: "Swiggy",star: "4.4"),
   ];
 
-  List <screenModel> name = [
-    screenModel(name: "Recommended for you"),
-    screenModel(name: "New & updated apps"),
-    screenModel(name: "Suggested for you"),
-    screenModel(name: "Editor's Choice apps"),
-  ];
 
   List <screenModel> datatwo = [
     screenModel(photo: "assets/image/angleone.png",appname: "Angel One",star: "4.2"),
@@ -43,6 +37,8 @@ class Image_Provider extends ChangeNotifier
     screenModel(photo: "assets/image/twitter.png",appname: "Twitter",star: "4.3"),
     screenModel(photo: "assets/image/whatsapp.png",appname: "Whatsapp",star: "4.4"),
   ];
+  List data2 = [];
+  screenModel?Datapickk;
 
 
 }

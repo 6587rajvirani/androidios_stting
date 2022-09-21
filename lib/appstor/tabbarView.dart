@@ -1,17 +1,15 @@
-import 'package:androidios_stting/appstor/botomnavigationbar.dart';
 import 'package:androidios_stting/appstor/firstScreen.dart';
 import 'package:androidios_stting/appstor/gamefirstScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-class home extends StatefulWidget {
-  const home({Key? key}) : super(key: key);
+class apps_TabBar extends StatefulWidget {
+  const apps_TabBar({Key? key}) : super(key: key);
 
   @override
-  State<home> createState() => _homeState();
+  State<apps_TabBar> createState() => _apps_TabBarState();
 }
 
-class _homeState extends State<home> {
+class _apps_TabBarState extends State<apps_TabBar> {
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +68,7 @@ class _homeState extends State<home> {
                                   child: TabBarView(
                                     children: [
                                       screenone(),
-                                      GameFirst_Scree(),
+                                      screenone(),
                                       screenone(),
                                       screenone(),
                                     ],
