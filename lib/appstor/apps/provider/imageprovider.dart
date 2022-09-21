@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'modelclass.dart';
+import '../model/modelclass.dart';
 
 class Image_Provider extends ChangeNotifier
 {

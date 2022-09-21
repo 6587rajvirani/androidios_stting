@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'firstScreen.dart';
+import '../apps/view/firstScreen.dart';
 
 class Game_Tabbar extends StatefulWidget {
   const Game_Tabbar({Key? key}) : super(key: key);

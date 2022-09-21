@@ -1,6 +1,6 @@
 
-import 'package:androidios_stting/appstor/imageprovider.dart';
-import 'package:androidios_stting/appstor/modelclass.dart';
+import 'package:androidios_stting/appstor/apps/provider/imageprovider.dart';
+import 'package:androidios_stting/appstor/apps/model/modelclass.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
