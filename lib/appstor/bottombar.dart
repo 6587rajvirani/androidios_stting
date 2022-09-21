@@ -1,11 +1,11 @@
-import 'package:androidios_stting/appstor/gamefirstScreen.dart';
-import 'package:androidios_stting/appstor/tabbarView.dart';
+import 'package:androidios_stting/appstor/game/gamefirstScreen.dart';
+import 'package:androidios_stting/appstor/apps/view/tabbarView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'botomnavigationbar.dart';
-import 'firstScreen.dart';
+import 'apps/view/firstScreen.dart';
 
 class bottomber_Screen extends StatefulWidget {
   const bottomber_Screen({Key? key}) : super(key: key);

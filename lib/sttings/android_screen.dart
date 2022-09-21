@@ -1,4 +1,4 @@
-import 'package:androidios_stting/provider.dart';
+import 'package:androidios_stting/sttings/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

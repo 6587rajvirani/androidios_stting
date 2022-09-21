@@ -1,5 +1,5 @@
-import 'package:androidios_stting/appstor/firstScreen.dart';
-import 'package:androidios_stting/appstor/gamefirstScreen.dart';
+import 'package:androidios_stting/appstor/apps/view/firstScreen.dart';
+import 'package:androidios_stting/appstor/game/gamefirstScreen.dart';
 import 'package:flutter/material.dart';
 
 class apps_TabBar extends StatefulWidget {
