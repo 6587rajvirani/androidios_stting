@@ -15,7 +15,7 @@ class bottomber_Screen extends StatefulWidget {
 }
 
 class _bottomber_ScreenState extends State<bottomber_Screen> {
-  List WidgetsList=[home(),GameFirst_Scree(),home(),home()];
+  List WidgetsList=[apps_TabBar(),Game_Tabbar(),apps_TabBar(),apps_TabBar()];
   @override
   Widget build(BuildContext context) {
     return SafeArea(

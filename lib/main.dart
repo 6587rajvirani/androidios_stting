@@ -1,17 +1,13 @@
 import 'dart:io';
-import 'package:androidios_stting/android_screen.dart';
 import 'package:androidios_stting/appstor/botomnavigationbar.dart';
 import 'package:androidios_stting/appstor/bottombar.dart';
 import 'package:androidios_stting/appstor/firstScreen.dart';
 import 'package:androidios_stting/appstor/gamefirstScreen.dart';
 import 'package:androidios_stting/appstor/imageprovider.dart';
+import 'package:androidios_stting/appstor/secondeScreen.dart';
 import 'package:androidios_stting/appstor/tabbarView.dart';
-import 'package:androidios_stting/iosScreen.dart';
 import 'package:androidios_stting/provider.dart';
-import 'package:androidios_stting/stepbottom.dart';
 import 'package:androidios_stting/stepper_providre.dart';
-import 'package:androidios_stting/steptop.dart';
-import 'package:androidios_stting/stteperspresScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -44,9 +40,10 @@ void main() {
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context)=>bottomber_Screen(),
-        'top':(context)=>home(),
+        'top':(context)=>apps_TabBar(),
         'one':(context)=>screenone(),
-        'game':(context)=>GameFirst_Scree(),
+        'sec':(context) =>app_cickScreen(),
+        'game':(context)=>Game_Tabbar(),
         //'/':(context)=>MyHomePage(),
         //'top':(context)=>steptop_Screen(),
         //'bottom':(context)=>stepbotom_Screen(),
@@ -60,9 +57,10 @@ void main() {
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context)=>bottomber_Screen(),
-        'top':(context)=>home(),
+        'top':(context)=>apps_TabBar(),
         'one':(context)=>screenone(),
-        'game':(context)=>GameFirst_Scree(),
+        'sec':(context) =>app_cickScreen(),
+        'game':(context)=>Game_Tabbar(),
         //'/':(context)=>MyHomePage(),
         //'top':(context)=>steptop_Screen(),
         //'bottom':(context)=>stepbotom_Screen(),
