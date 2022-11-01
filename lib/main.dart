@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:js';
 import 'package:androidios_stting/appstor/botomnavigationbar.dart';
 import 'package:androidios_stting/appstor/bottombar.dart';
 import 'package:androidios_stting/appstor/apps/view/firstScreen.dart';
@@ -6,6 +7,7 @@ import 'package:androidios_stting/appstor/game/gamefirstScreen.dart';
 import 'package:androidios_stting/appstor/apps/provider/imageprovider.dart';
 import 'package:androidios_stting/appstor/apps/view/secondeScreen.dart';
 import 'package:androidios_stting/appstor/apps/view/tabbarView.dart';
+import 'package:androidios_stting/store/bottombarinstore.dart';
 import 'package:androidios_stting/sttings/provider.dart';
 import 'package:androidios_stting/stepper/stepper_providre.dart';
 import 'package:flutter/cupertino.dart';
@@ -39,14 +41,18 @@ void main() {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>bottomber_Screen(),
-        'top':(context)=>apps_TabBar(),
-        'one':(context)=>screenone(),
-        'sec':(context) =>app_cickScreen(),
-        'game':(context)=>Game_Tabbar(),
+        '/':(context)=>store_Bottombar(),
+
+        // '/':(context)=>bottomber_Screen(),
+        // 'top':(context)=>apps_TabBar(),
+        // 'one':(context)=>screenone(),
+        // 'sec':(context) =>app_cickScreen(),
+        // 'game':(context)=>Game_Tabbar(),
+
         //'/':(context)=>MyHomePage(),
         //'top':(context)=>steptop_Screen(),
         //'bottom':(context)=>stepbotom_Screen(),
+
        // '/': (context) => androidscreen(),
 
       },
@@ -56,14 +62,18 @@ void main() {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>bottomber_Screen(),
-        'top':(context)=>apps_TabBar(),
-        'one':(context)=>screenone(),
-        'sec':(context) =>app_cickScreen(),
-        'game':(context)=>Game_Tabbar(),
+        '/':(context)=>store_Bottombar(),
+
+        // '/':(context)=>bottomber_Screen(),
+        // 'top':(context)=>apps_TabBar(),
+        // 'one':(context)=>screenone(),
+        // 'sec':(context) =>app_cickScreen(),
+        // 'game':(context)=>Game_Tabbar(),
+
         //'/':(context)=>MyHomePage(),
         //'top':(context)=>steptop_Screen(),
         //'bottom':(context)=>stepbotom_Screen(),
+
       //  '/': (context) => ios_Screen(),
       },
     );
